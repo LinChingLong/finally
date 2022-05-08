@@ -1,0 +1,496 @@
+@import url("reset.css");
+body{
+    box-sizing: border-box;
+
+    color: white;
+    line-height: 1.4;
+}
+.wrapper{
+    position: relative;
+}
+/* ------------- 購物車 -------------- */
+.main__shoppingcart__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    
+    display: none;
+}
+
+.main__shoppingcart__container .shoppingcart__container{
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(111, 81, 41);
+    width: 80%;
+    max-width: 800px;
+    margin: 60px auto;
+
+    /* .post{
+
+    } */
+    
+    padding: 80px 0;
+
+    position: relative;
+}
+
+.main__shoppingcart__container .fa-xmark{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+.main__shoppingcart__container .shoppingcart__container .project{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(111, 81, 41);
+    
+}
+.main__shoppingcart__container .shoppingcart__container .project p:nth-child(1){
+    min-width: 300px;
+}
+.main__shoppingcart__container .shoppingcart__container .project p:nth-child(2){
+    flex-grow: 1;
+}
+.main__shoppingcart__container .shoppingcart__container .post{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+ 
+.main__shoppingcart__container .shoppingcart__container .list__container{
+    margin-bottom: 20px;
+}
+.main__shoppingcart__container .shoppingcart__container .list__container ul{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 讓價格部會因為商品名稱長短而影響價格位置，價格會統一對齊靠左 */
+.main__shoppingcart__container .shoppingcart__container .list__container .list__block{
+    min-width: 300px;
+}
+
+
+.main__shoppingcart__container .shoppingcart__container .list__container  h4{
+    flex-grow: 1;
+}
+/* 讓價格部會因為商品名稱長短而影響價格位置，價格會統一對齊靠左 */
+
+.main__shoppingcart__container .shoppingcart__container .list__container ul li{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.main__shoppingcart__container .shoppingcart__container .list__container ul .list__number{
+    width: 50px;
+}
+.main__shoppingcart__container .bottom__checkout{
+    margin: 0 auto;
+    background-color: rgb(111, 81, 41);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 80px;
+
+    cursor: pointer;
+}
+/* -- header導覽列 -- */
+header{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    position: relative;
+
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; */
+}
+header .top-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
+
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
+
+}
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
+}
+header nav .fa-bars{
+    display: none;
+}
+header nav #shop__car--icon{
+    cursor: pointer;
+    padding-bottom: 2px;
+}
+header nav #shop__car--icon:hover {
+    color: rgb(235, 192, 136);
+    border-bottom: 1px solid white;
+    transition: 1s;
+}
+/* ---------------- hide-field 隱藏欄位 ---------------- */
+.wrapper .hide-field{
+    color: rgb(161, 112, 39);
+    text-align: center;
+
+    margin: 70px 0 50px;
+}
+.wrapper .hide-field h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.wrapper .hide-field h3 .fa-solid{
+    font-size: 24px;
+}
+.wrapper .hide-field h3 .fa-solid:hover{
+    color: rgb(109, 69, 9);
+    cursor: pointer; 
+}
+.wrapper .hide-field .icon-out{
+    border: 1px dotted rgb(161, 112, 39);
+    width: 60%;
+    height: 200px;
+    border-radius: 30px;
+    margin: 0 auto 20px;
+
+    display: none;
+}
+.wrapper .hide-field .about-icon{
+    display: flex;
+    padding-top: 40px;
+}
+.wrapper .hide-field .about-icon li{
+    flex-basis:0;
+    flex-grow: 1;
+    padding: 0 15px;
+}
+.wrapper .hide-field li img{
+    margin-bottom: 6px;
+}
+.wrapper .hide-field li h6{
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 2px;
+}
+.wrapper .hide-field .about-icon li p{
+    font-size: 12px;
+}
+.wrapper .hide-field h5{
+    font-size: 14px;
+}
+/* ---------------- pointsList 收縮圖層 ---------------- */
+.wrapper .pointsList{
+    display: flex;
+    width: 98%;
+    margin: 0 auto 200px;
+}
+.wrapper .pointsList li{
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    height: 500px;
+    transition: .5s;
+}
+.wrapper .pointsList li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all .3s;
+}
+.wrapper .pointsList li:hover{
+    flex-grow: 3;
+}
+.wrapper .pointsList li:hover::after {
+    background-color: transparent; 
+    /* 使上面的黑色半透明便完全透明(箭頭接觸時觸發) */
+}
+.wrapper .pointsList li .IMG{
+    display: block;
+    border: 1px solid white;
+}
+.wrapper .pointsList li .icon{
+}
+.wrapper .pointsList li .IMG img{
+    /* --- 使img變成背景圖的寫法 --- */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ---這種寫法要在父層給他寬高，就是加在上面的 flex-grow:1; 和 height: 500px; --- */
+    object-fit: cover;  
+}
+.wrapper .pointsList li .icon img{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+/* ---------------- article 圖文區 ---------------- */
+.wrapper article{
+    position: relative;
+}
+.wrapper article .out-frame{
+    background-color: rgb(161, 112, 39);
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: space-around;
+}
+.wrapper article .out-frame .left-img{
+    transform: translateY(-90px);
+    margin-left: 20px;
+}
+.wrapper article .out-frame .left-img img{
+}
+.wrapper article .out-frame .word{
+}
+.wrapper article .out-frame .word h3{
+    font-size: 36px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+.wrapper article .out-frame .word h3::after{
+    display: block;
+    content: '';
+    border-top: 5px dotted rgb(255, 255, 255);
+    margin-top: 10px;
+}
+.wrapper article .out-frame .word p{
+    font-size: 24px;
+}
+.wrapper article .Canelé{
+    position: absolute;
+    right: 60px;
+    top: -330px;
+}
+.wrapper article .Canelé img{
+}
+/* ---------------- picture 小圖區 ---------------- */
+.wrapper .picture{
+    width: 90%;
+    margin: 30px auto 20px;
+}
+.wrapper .picture::before{
+    display: block;
+    content: '';
+    border-top: 5px dotted rgb(161, 112, 39);
+}
+.wrapper .picture ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+}
+.wrapper .picture ul li{
+    border: 1px solid rgb(161, 112, 39);
+    padding: 10px;
+    margin: 0 10px 20px;
+}
+.wrapper .picture li:hover{
+    background-color:rgb(161, 112, 39);
+}
+.wrapper .picture ul li img{
+    display: block;
+    width: 100%;
+}
+/* -- footer -- */
+footer{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+footer .footer-logo p{
+    margin-left: 15px;
+}
+footer .footer-icon{
+}
+footer .footer-icon a{
+    color: white;
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
+/* ------------------------ RWD ------------------------ */
+@media (max-width:940px) {
+    .wrapper article .out-frame .word p{
+        font-size: 20px;
+    }
+    .wrapper article .Canelé{
+        display: none;
+    }
+}
+@media (max-width:850px) {
+    .wrapper article .out-frame .word h3{
+        font-size: 30px;
+    }
+    .wrapper article .out-frame .word p{
+        font-size: 18px;
+    }
+    .wrapper article .out-frame .left-img img{
+        width: 300px;
+    }
+}
+@media (max-width:750px) {
+    .wrapper article .out-frame .left-img{
+        transform: translateY(5px);
+        margin-left: 20px;
+    }
+    .wrapper article .out-frame .left-img img{
+        width: 250px;
+    }
+}
+@media (max-width:700px) {
+    .wrapper article .out-frame .left-img{
+        display: none;
+    }
+}
+@media (max-width:450px) {
+    .wrapper article .out-frame .word h3{
+        font-size: 24px;
+    }
+    .wrapper article .out-frame .word p{
+        font-size: 14px;
+    }
+}
+/* ------------------------ RWD ------------------------ */
+@media (max-width:600px) {
+    .wrapper .hide-field .icon-out{
+        width: 80%;
+    }
+}
+@media (max-width:450px) {
+    .wrapper .hide-field .icon-out{
+        height: 250px;
+    }
+    .wrapper .hide-field li img{
+        width: 50px;
+    }
+}
+@media (max-width:450px) {
+    .wrapper .hide-field .icon-out{
+        height: 250px;
+    }
+    .wrapper .hide-field li img{
+        width: 40px;
+    }
+}
+
+/* ------------------------------ RWD 麵包屑------------------------------ */
+
+@media (max-width:700px) {
+    header nav .fa-solid{
+        display: block;
+    }
+
+    header nav ul{
+        position: absolute;
+        background-color: rgb(161, 112, 39);
+        padding: 0;
+        z-index: 15;
+        top: 80px;
+        right: 0;
+
+        width: 30%;
+        height: calc(100vh - 80px);
+
+        display: none;
+    }
+    header nav ul li{
+        float: none;
+        /* position: absolute; */
+        text-align: center;
+        padding: 15px 0;
+
+        border-bottom:1px solid rgb(123, 81, 17);
+        
+    }
+    header nav .fa-solid:hover ~ul{
+        display: block;
+    }
+}

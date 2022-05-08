@@ -1,0 +1,674 @@
+@import url("reset.css");
+body{
+    box-sizing: border-box;
+
+    color: white;
+    line-height: 1.4;
+}
+.wrapper{
+    position: relative;
+}
+/* -- header導覽列 -- */
+header{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    position: relative;
+
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; */
+}
+header .top-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
+
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
+
+}
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
+}
+header nav .fa-bars{
+    display: none;
+}
+header nav #shop__car--icon{
+    cursor: pointer;
+    padding-bottom: 2px;
+}
+header nav #shop__car--icon:hover {
+    color: rgb(235, 192, 136);
+    border-bottom: 1px solid white;
+    transition: 1s;
+}
+/* -- main -- */
+main{
+
+}
+/* -- 輪播大圖 swiper -- */
+.wrapper main .swiper-mySwiper ul{
+    position: relative;
+    height: 608px;
+    width: 100%;
+}
+.wrapper main .swiper-mySwiper li{
+    position: absolute;
+    /* right: -120%; */
+    top: 0;
+    opacity: 0;
+    transition: all 2s;
+
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper main .swiper-mySwiper li img{
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* -- 圖文1 section -- */
+main section{
+    display: flex;
+    justify-content: space-around;
+
+    position: relative;
+    z-index: 1;
+}
+
+main section .img-left{
+    transform: translateY(100px);
+}
+main section .img-right{
+    transform: translateY(-100px);
+}
+main section img{
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 50%);
+}
+main section h2{
+    writing-mode: vertical-lr;
+
+    color: rgb(111, 81, 41);
+    font-size: 40px;
+
+    padding-top: 200px;
+}
+main section h2 p{
+    margin: 0 10px;
+}
+
+/* -- main裡 輪播小圖 loop-img -- */
+main .loop-img{
+    background-image: url("../index-image/輪播bgi\(1440x580\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    padding: 20px 0;
+    
+    overflow: hidden;
+}
+.loop-img .loop-img-container{
+    display: flex;
+    transform: translate3d(0px, 0px, 0px);
+    animation: 15s loopimg linear  infinite;
+}
+main .loop-img .loop-img-container img{
+    margin-left: 7px;
+}
+@keyframes loopimg {
+    0%{
+        transform: translate3d(0px, 0px, 0px);
+    }
+    100%{
+        transform: translate3d(-1535px, 0px, 0px);
+    }
+}
+
+/* -- main裡 圖文2 mark -- */
+main .mark{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 0;
+}
+main .mark img{
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 50%);
+}
+main .mark p{
+    font-size: 24px;
+    color: rgb(111, 81, 41);
+    line-height: 1.4;
+}
+/* -- main裡 aside -- */
+main .aside{
+    background-image: url("../index-image/輪播bgi\(1440x580\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main .aside ul{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 50px 0 50px 0;
+}
+main .aside ul li{
+}
+main .aside ul a{
+}
+main .aside ul a:hover img{
+    /* width: 100%;
+    transition: 1s; */
+}
+main .aside ul img{
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 50%);
+    width: 300px;
+}
+main .aside ul p{
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+
+    font-size: 24px;
+    color: rgb(111, 81, 41);
+    line-height: 1.4;
+
+    margin: 10px auto;
+}
+/* -- main裡 more -- */
+main .more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 30px;
+}
+main .more .dotted-line{
+    width: 500px;
+}
+main .more .dotted-line::after{
+    content: "";
+    display: block;
+    border-top: 2px dotted #fff;
+}
+main .more a{
+    text-decoration: none;
+    color:  #fff;
+    font-size: 24px;
+
+    padding: 0 20px;
+}
+main .more a:hover{
+
+}
+/* -- main裡 .details -- */
+main .details{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+main .details img{
+    width: 570px;
+    height: 380px;
+
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 50%);
+}
+main .details .News{
+    background-color: rgb(111, 81, 41);
+    height: 250px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 50%);
+
+    padding: 15px;
+    transform: translateX(-50px);
+}
+main .details .News p{
+    color:  #fff;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+/* ------------- 購物車 -------------- */
+main .main__shoppingcart__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+
+    display: none;
+}
+
+main .main__shoppingcart__container .shoppingcart__container{
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(111, 81, 41);
+    width: 80%;
+    max-width: 800px;
+    margin: 60px auto;
+
+    /* .post{
+
+    } */
+    
+    padding: 80px 0;
+
+    position: relative;
+}
+
+main .main__shoppingcart__container .fa-xmark{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+main .main__shoppingcart__container .shoppingcart__container .project{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(111, 81, 41);
+    
+}
+main .main__shoppingcart__container .shoppingcart__container .project p:nth-child(1){
+    min-width: 300px;
+}
+main .main__shoppingcart__container .shoppingcart__container .project p:nth-child(2){
+    flex-grow: 1;
+}
+main .main__shoppingcart__container .shoppingcart__container .post{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+ 
+main .main__shoppingcart__container .shoppingcart__container .list__container{
+    margin-bottom: 20px;
+}
+main .main__shoppingcart__container .shoppingcart__container .list__container ul{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 讓價格部會因為商品名稱長短而影響價格位置，價格會統一對齊靠左 */
+main .main__shoppingcart__container .shoppingcart__container .list__container .list__block{
+    min-width: 300px;
+}
+
+
+main .main__shoppingcart__container .shoppingcart__container .list__container  h4{
+    flex-grow: 1;
+}
+/* 讓價格部會因為商品名稱長短而影響價格位置，價格會統一對齊靠左 */
+
+main .main__shoppingcart__container .shoppingcart__container .list__container ul li{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+main .main__shoppingcart__container .shoppingcart__container .list__container ul .list__number{
+    width: 50px;
+}
+main .main__shoppingcart__container .bottom__checkout{
+    margin: 0 auto;
+    background-color: rgb(111, 81, 41);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 80px;
+
+    cursor: pointer;
+}
+
+/* -- footer -- */
+footer{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+footer .footer-logo p{
+    margin-left: 15px;
+}
+footer .footer-icon{
+}
+footer .footer-icon a{
+    color: white;
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
+/* ------------------------------ hint-word ------------------------------ */
+.wrapper h6{
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* ------------------------------ RWD 麵包屑------------------------------ */
+
+@media (max-width:700px) {
+    header nav .fa-solid{
+        display: block;
+    }
+
+    header nav ul{
+        position: absolute;
+        background-color: rgb(161, 112, 39);
+        padding: 0;
+        z-index: 15;
+        top: 80px;
+        right: 0;
+
+        width: 30%;
+        height: calc(100vh - 80px);
+
+        display: none;
+    }
+    header nav ul li{
+        float: none;
+        /* position: absolute; */
+        text-align: center;
+        padding: 15px 0;
+
+        border-bottom:1px solid rgb(123, 81, 17);
+        
+    }
+    header nav .fa-solid:hover ~ul{
+        display: block;
+    }
+}
+/* ------------------------------ RWD 輪播大圖------------------------------ */
+@media (max-width:800px) {
+
+    .wrapper main .swiper-mySwiper ul{
+        height: 400px;
+    }
+}
+/* ------------------------------ RWD section 左右圖文------------------------------ */
+@media (max-width:1200px) {
+    main section img{
+        width: 400px;
+        height: 600px;
+    }
+}
+@media (max-width:1000px) {
+    main section{
+        padding: 20px 0;
+    }
+    main section img{
+        width: 300px;
+        height: 500px;
+    }
+    main section .img-left{
+        transform: translateY(0px);
+    }
+    main section .img-right{
+        transform: translateY(0px);
+    }
+    main section h2{
+        padding-top: 100px;
+    }
+}
+@media (max-width:800px) {
+    main section .img-right{
+        display: none;
+    }
+}
+@media (max-width:500px) {
+    main section .img-left{
+        padding-top: 30px;
+    }
+    main section img{
+        width: 200px;
+        height: 350px;
+    }
+    main section h2{
+        padding-top: 60px;
+    }
+}
+/* ------------------------------ RWD mark 可麗露文字介紹------------------------------ */
+
+@media (max-width:1153px) {
+    main .mark p{
+        padding: 0 20px;
+    }
+    main .mark p br{
+        display: none;
+    }
+}
+@media (max-width:900px) {
+    main .mark{
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+    main .mark img{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:570px) {
+    main .mark{
+        display: block;
+        text-align: center;
+    }
+    main .mark img{
+        width: 450px;
+        height: 300px;
+    }
+    main .mark p{
+        font-size: 18px;
+    }
+}
+@media (max-width:500px) {
+    .wrapper h6{
+        font-size: 8px;
+    }
+}
+@media (max-width:475px) {
+    main .mark img{
+        width: 350px;
+        height: 250px;
+    }
+}
+
+/* ------------------------------ RWD aside 商品推薦------------------------------ */
+@media (max-width:1000px) {
+    main .aside ul img{
+        width: 250px;
+    }
+}
+@media (max-width:800px) {
+    main .aside ul img{
+        width: 200px;
+    }
+}
+@media (max-width:650px) {
+    main .aside ul .blueberry{
+        display: none;
+    }
+}
+@media (max-width:500px) {
+    main .aside ul img{
+        width: 250px;
+    }
+    main .aside ul .strawberry{
+        display: none;
+    }
+}
+
+/* ------------------------------ RWD details 店家資訊 ------------------------------ */
+@media (max-width:1100px) {
+    main .details{
+        padding: 20px 0;
+    }
+    main .details img{
+        width: 500px;
+        height: 300px;
+    }    
+    main .details .News{
+        height: 200px;
+        width: 360px;
+        transform: translateX(20px);
+    }
+    main .details .News p{
+        font-size: 20px;
+    }
+}
+@media (max-width:900px) {
+    main .details img{
+        width: 350px;
+        height: 200px;
+    }   
+    main .details .News{
+        height: 180px;
+        width: 300px;
+    } 
+    main .details .News p{
+        font-size: 18px;
+    }
+}
+@media (max-width:720px) {
+    main .details{
+        display:block;
+
+        text-align: center;
+    }
+    main .details img{
+        width: 500px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    main .details .News{
+        background-color: rgb(111, 81, 41);
+        height: 200px;
+        width: 450px;
+
+        display: block;
+        margin: 0 auto;
+
+        transform: translateX(0px);
+    }
+    main .details .News p{
+        font-size: 24px;
+        text-align: center;
+    }
+}
+@media (max-width:510px) {
+    main .details img{
+        width: 350px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    main .details .News{
+        background-color: rgb(111, 81, 41);
+        height: 110px;
+        width: 300px;
+
+        display: block;
+        margin: 0 auto;
+
+        transform: translateX(0px);
+    }
+    main .details .News p{
+        font-size: 14px;
+        text-align: center;
+    }
+}
+/* ------------------------------ RWD footer ------------------------------ */
+@media (max-width:660px) {
+    footer ul{
+        display: none;
+    }
+}
+/* ------------------------------ RWD 底字 ------------------------------ */
+@media (max-width:510px) {
+    #hint-word{
+    }
+}
